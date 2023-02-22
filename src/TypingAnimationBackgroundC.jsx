@@ -148,7 +148,7 @@ const TypingAnimationBackgroundC = ({ content }) => {
                 // setX(randNumGenerator(word, DIV_1_MIN_X, DIV_1_MAX_X, OFFSET));
                 // setY(randNumGenerator(word, DIV_1_MIN_Y, DIV_1_MAX_Y, OFFSET));
 
-                sentances([
+                setSentances([
                     content[0][i],
                     content[0][i + 1],
                     content[0][i + 2],
