@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-import TypingAnimationBackgroundC from "./TypingAnimationBackgroundC";
+import TypingAnimationC from "./TypingAnimationC";
 
 const c = [
     [
@@ -56,14 +56,14 @@ function App() {
     useEffect(() => {
         const interval = setInterval(() => {
             setContent([...c]);
-        }, 10000);
+        }, 15000);
 
         return () => clearInterval(interval);
     }, []);
 
     return (
         <div className="App">
-            <TypingAnimationBackgroundC content={content} />
+            <TypingAnimationC content={content} />
         </div>
     );
 }
