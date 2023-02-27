@@ -29,14 +29,14 @@ const TypingAnimationSentanceC = ({ sentance, x, y }) => {
         }, 10);
 
         return () => clearInterval(interval);
-    }, [sentance]);
+    }, [sentance, x, y]);
 
     useEffect(() => {
         codeRef.current.style.position = "absolute";
         codeRef.current.style.left = x;
         codeRef.current.style.top = y;
         codeRef.current.style.color = "#537EC5";
-    }, [sentance]);
+    }, [sentance, x, y]);
 
     useEffect(() => {
         setEmptyCode(emptyCode + char);
@@ -55,7 +55,7 @@ const TypingAnimationSentanceC = ({ sentance, x, y }) => {
         }, 100);
 
         return () => clearInterval(interval);
-    }, [sentance]);
+    }, [sentance, x, y]);
 
     return <span ref={codeRef}>{emptyCode}</span>;
 };
